@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: news-frontend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: REACT_APP_BACKEND_URL
+        value: https://news-backend.onrender.com
